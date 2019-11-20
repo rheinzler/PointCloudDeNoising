@@ -1,9 +1,12 @@
 # PointCloudDeNoisingBenchmark
 
-<img src="./doc/teaser.png" width="800">
-
-This repository contains the data for  
-
+<img src="./doc/cyclist.gif" width="1000">
+## Color Coding
+|input|segmentation|output|
+|--|--|--|
+|![#9F1924](https://placehold.it/15/9F1924/000000?text=+) raw point-cloud |![#9E9E9E](https://placehold.it/15/9E9E9E/000000?text=+) valid/clear |![#6EA046](https://placehold.it/15/6EA046/000000?text=+) de-noised| 
+|| ![#7300E6](https://placehold.it/15/7300E6/000000?text=+)  fog | 
+|| ![#009999](https://placehold.it/15/009999/000000?text=+) rain | 
 Data will be available soon.
 
 ## Abstract
