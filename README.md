@@ -1,6 +1,7 @@
 # PointCloudDeNoisingBenchmark
 
 <img src="./doc/cyclist.gif" width="1000">
+
 ## Color Coding
 
 |input|segmentation|output|
