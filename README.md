@@ -35,4 +35,4 @@ If you find our work on benchmarking lidar point-cloud de-noising in adverse wea
 ```
 
 ## Acknowledgements
-This work has received funding from the European Union under the H2020 ECSEL Programme as part of the DENSE project, contract number 692449.
+This work has received funding from the European Union under the H2020 ECSEL Programme as part of the DENSE project, contract number 692449. We thank Velodyne Lidar, Inc. for permission to publish this dataset.  
