@@ -1,6 +1,8 @@
 # PointCloudDeNoisingBenchmark
 
 <img src="./doc/cyclist.gif" width="1000">
+<img src="./doc/pedestrian.gif" width="1000">
+
 
 |input|segmentation|output|
 |--|--|--|
