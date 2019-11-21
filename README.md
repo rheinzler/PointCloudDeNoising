@@ -22,15 +22,17 @@ Clone the benchmark repository.
 git clone https://github.com/rheinzler/PointCloudDeNoisingBenchmark.git
 cd PointCloudDeNoisingBenchmark
 ```
-Download the benchmark data
-
-
-
-
 
 ## Reference
-If you find our work on benchmarking lidar point-cloud de-noising useful in your research, please consider citing our paper:
-
+If you find our work on benchmarking lidar point-cloud de-noising in adverse weather useful for your research, please consider citing our work.:
+```
+@inproceedings{denoisingbenchmark2019,
+  title     = {CNN-based Lidar Point Cloud De-Noising in Adverse Weather},
+  author    = {Heinzler, Robin and Piewak, Florian and Schindler, Philipp and Stork, Wilhelm},
+  booktitle = {},
+  year      = {2019}
+}
+```
 
 ## Acknowledgements
 This work has received funding from the European Union under the H2020 ECSEL Programme as part of the DENSE project, contract number 692449.
