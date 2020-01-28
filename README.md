@@ -13,10 +13,11 @@ In heavy rain or dense fog, water drops could be misinterpreted as objects in fr
 In this paper, we present the first CNN-based approach to understand and filter out such adverse weather effects in point cloud data. Using a large data set obtained in controlled weather environments, we demonstrate a significant performance improvement of our method over state-of-the-art involving geometric filtering.
 
 ## Download Dataset
-Information: Click here for registration and download. (link will be available soon)
+Information: Click [here](https://www.uni-ulm.de/index.php?id=101568) for registration and download. 
+(download will be available soon)
 
 ## Getting Started
-We provide documented tools for visualization in *python* using ROS. Therefore you need to install ROS first and then start "roscore" and "rviz" in separate terminals. Afterwards you can use the visualization tool:
+We provide documented tools for visualization in *python* using ROS. Therefore, you need to install ROS first and then start "roscore" and "rviz" in separate terminals. Afterwards, you can use the visualization tool:
 * clone the repository:
 ```
 cd ~/workspace
