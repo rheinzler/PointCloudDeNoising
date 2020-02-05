@@ -16,7 +16,15 @@ In this paper, we present the first CNN-based approach to understand and filter 
 Information: Click [here](https://www.uni-ulm.de/index.php?id=101568) for registration and download.
 
 ## Getting Started
-We provide documented tools for visualization in *python* using ROS. Therefore, you need to install ROS first and then start "roscore" and "rviz" in separate terminals. Afterwards, you can use the visualization tool:
+We provide documented tools for visualization in *python* using ROS. 
+Therefore, you need to install [ROS](http://wiki.ros.org/ROS/Installation) and the [rospy](http://wiki.ros.org/rospy) client API first.
+* install rospy
+ ```bash
+ apt install python-rospy  
+```
+Then start "roscore" and "rviz" in separate terminals.
+
+Afterwards, you can use the visualization tool:
 * clone the repository:
 ```
 cd ~/workspace
@@ -38,7 +46,12 @@ pip install -r requirements.txt
 cd src
 python visu.py
 ```
-Note: We used the following label mapping for a single lidar point: 0: no label, 100: valid/clear, 101: rain, 102: fog
+
+Notes: 
+* We used the following label mapping for a single lidar point: 0: no label, 100: valid/clear, 101: rain, 102:
+ fog
+* Before executing the script you should change the input path
+
 
 ## Reference
 If you find our work on lidar point-cloud de-noising in adverse weather useful for your research, please consider citing our work.:
