@@ -56,7 +56,7 @@ Notes:
 ## Reference
 If you find our work on lidar point-cloud de-noising in adverse weather useful for your research, please consider citing our work.:
 ```
-@article{PointCloudDeNoising2019, 
+@article{PointCloudDeNoising2020, 
   author   = {Heinzler, Robin and Piewak, Florian and Schindler, Philipp and Stork, Wilhelm},
   journal  = {IEEE Robotics and Automation Letters}, 
   title    = {CNN-based Lidar Point Cloud De-Noising in Adverse Weather}, 
