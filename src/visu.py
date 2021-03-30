@@ -15,11 +15,14 @@ try:
     from sensor_msgs.msg import PointField
     from std_msgs.msg import Header
 except ImportError:
+    print('ImportError Rospy!')
+    print('No visualization, but the data is shown in the terminal')
     rospy = None
 
 # settings
 # change input path here
 PATH = '~/PointCloudDeNoising/test_01/2018-11-29_104141_Static2-FogB/'
+PATH = '/Volumes/RH_1TB_SSD/0_backup/icra_public/lidar_data_upload/RA-L_19-1060_data_upload/test_01/2018-11-29_101343_Static2-Clear/'
 COLOR_LABEL_MAPPING = {
     0: [0, 0, 0],
     100: [158, 158, 158],
@@ -36,11 +39,12 @@ class RosPublisher:
         # init ros
         self.name = name
         self.cloud_topic_name = "pointcloud"
-        rospy.init_node(self.name + self.cloud_topic_name)
-        self.rostime = rospy.Time.now()
-        self.ros_rate = rospy.Rate(100)
-        self.ros_publisher = rospy.Publisher('RosPublisher/{}'.format(name), PointCloud2, queue_size=10)
-        self.r = rospy.Rate(100)
+        if rospy is not None:
+            rospy.init_node(self.name + self.cloud_topic_name)
+            self.rostime = rospy.Time.now()
+            self.ros_rate = rospy.Rate(100)
+            self.ros_publisher = rospy.Publisher('RosPublisher/{}'.format(name), PointCloud2, queue_size=10)
+            self.r = rospy.Rate(100)
 
         # define hdf5 data format
         self.channels = ['labels_1', 'distance_m_1', 'intensity_1', 'sensorX_1', 'sensorY_1', 'sensorZ_1']
@@ -62,6 +66,12 @@ class RosPublisher:
 
     def publish(self):
         """publish a single point cloud """
+        if rospy is None:
+            print('distance_m_1', self.distance_m_1.flatten())
+            print('intensity_1', self.intensity_1.flatten())
+            print('labels_1', self.labels_1.flatten())
+            return
+
         header = Header()
         header.stamp = rospy.Time.now()
         header.frame_id = 'base'
