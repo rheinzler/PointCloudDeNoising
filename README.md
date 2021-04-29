@@ -5,7 +5,7 @@
 
 |input|segmentation|output|
 |--|--|--|
-|![#9F1924](https://placehold.it/15/9F1924/000000?text=+) raw point-cloud |![#9E9E9E](https://placehold.it/15/9E9E9E/000000?text=+) valid/clear      ![#7300E6](https://placehold.it/15/7300E6/000000?text=+) fog  ![#009999](https://placehold.it/15/009999/000000?text=+) rain | ![#6EA046](https://placehold.it/15/6EA046/000000?text=+) de-noised|
+|![#9F1924](https://via.placeholder.com/15/9F1924/000000?text=+) raw point-cloud | ![#9E9E9E](https://via.placeholder.com/15/9E9E9E/000000?text=+) valid/clear ![#7300E6](https://via.placeholder.com/15/7300E6/000000?text=+) fog ![#009999](https://via.placeholder.com/15/009999/000000?text=+) rain | ![#6EA046](https://via.placeholder.com/15/6EA046/000000?text=+) de-noised|
 
 ## Abstract
 Lidar sensors are frequently used in environment perception for autonomous vehicles and mobile robotics to complement camera, radar, and ultrasonic sensors. Adverse weather conditions are significantly impacting the performance of lidar-based scene understanding by causing undesired measurement points that in turn effect missing detections and false positives.
@@ -14,6 +14,33 @@ In this paper, we present the first CNN-based approach to understand and filter 
 
 ## Download Dataset
 Information: Click [here](https://www.uni-ulm.de/index.php?id=101568) for registration and download.
+
+## Dataset Information
+ * each channel contains a matrix with 32x400 values, ordered in layers and columns
+ * the coordinate system is based on the conventions for land vehicles DIN ISO 8855 [(Wikipedia)](https://en.wikipedia.org/wiki/Axes_conventions)
+ 
+|hdf5 channels|info|
+|--|--|
+|labels_1|groundtruth labels, 0: no label, 100: valid/clear, 101: rain, 102: fog|
+|distance_m_1|distance in meter |
+|intensity_1|raw intensity of the sensor|
+|sensorX_1|x-coordinates in a projected 32x400 view|
+|sensorY_1|y-coordinates in a projected 32x400 view|
+|sensorZ_1|z-coordinates in a projected 32x400 view|
+
+|hdf5 attributes|info|
+|--|--|
+|dateStr|date of the recording yyyy-mm-dd|
+|timeStr|timestamp of the recording HH:MM:SS|
+|meteorologicalVisibility_m|ground truth meteorological visibility in meter provided by the climate chamber|
+|rainfallRate_mmh|ground truth rainfall rate visibility in mm/h provided by the climate chamber|
+ ```python
+# example for reading the hdf5 attributes
+import h5py
+with h5py.File(filename, "r", driver='core') as hdf5:
+   weather_data = dict(hdf5.attrs)
+```
+
 
 ## Getting Started
 We provide documented tools for visualization in *python* using ROS. 
