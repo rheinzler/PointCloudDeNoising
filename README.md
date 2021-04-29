@@ -33,7 +33,7 @@ Information: Click [here](https://www.uni-ulm.de/index.php?id=101568) for regist
 |dateStr|date of the recording yyyy-mm-dd|
 |timeStr|timestamp of the recording HH:MM:SS|
 |meteorologicalVisibility_m|ground truth meteorological visibility in meter provided by the climate chamber|
-|rainfallRate_mmh|ground truth rainfall rate visibility in mm/h provided by the climate chamber|
+|rainfallRate_mmh|ground truth rainfall rate in mm/h provided by the climate chamber|
  ```python
 # example for reading the hdf5 attributes
 import h5py
