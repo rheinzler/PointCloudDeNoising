@@ -22,7 +22,6 @@ except ImportError:
 # settings
 # change input path here
 PATH = '~/PointCloudDeNoising/test_01/2018-11-29_104141_Static2-FogB/'
-PATH = '/Volumes/RH_1TB_SSD/0_backup/icra_public/lidar_data_upload/RA-L_19-1060_data_upload/test_01/2018-11-29_101343_Static2-Clear/'
 COLOR_LABEL_MAPPING = {
     0: [0, 0, 0],
     100: [158, 158, 158],
